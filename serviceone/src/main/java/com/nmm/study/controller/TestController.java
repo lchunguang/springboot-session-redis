@@ -48,7 +48,7 @@ public class TestController {
     @ResponseBody
     @RequestMapping("/getSession/{key}")
     public String getSession(@PathVariable String key ,HttpServletRequest request){
-        return request.getSession().getAttribute(key) + "---- sessionId:" + request.getSession().getId() ;
+        return request.getSession().getAttribute(key) + "---- sessionId:" + request.getSession().getId()+request.getSession().getAttribute(key) ;
     }
 
     /**
